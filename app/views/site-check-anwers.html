@@ -1,0 +1,304 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check your answers 
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Site name"
+            },
+            value: {
+              text: "Answer 1"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Number of homes"
+            },
+            value: {
+              text: "Answer 2"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Type of homes"
+            },
+            value: {
+              text: "Answer 3"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+                
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Planning reference number"
+            },
+            value: {
+              text: "Answer 4"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 4"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Location"
+            },
+            value: {
+              text: "Answer 5"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 5"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Planning status"
+            },
+            value: {
+              text: "Answer 6"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 6"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Estimated start date"
+            },
+            value: {
+              text: "Answer 7"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 7"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Estimated completion date"
+            },
+            value: {
+              text: "Answer 8"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 8"
+                }
+                
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Site purchased, site cost, site value, source"
+            },
+            value: {
+              text: "Answer 9"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 9"
+                }
+                
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Site purchased from"
+            },
+            value: {
+              text: "Answer 10"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 10"
+                }
+                
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Public sector grant funding"
+            },
+            value: {
+              text: "Answer 11"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 11"
+                }
+                
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Additional information"
+            },
+            value: {
+              text: "Answer 12"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 12"
+                }
+                
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Affordable homes"
+            },
+            value: {
+              text: "Answer 13"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 13"
+                }
+                
+              ]
+            }
+          }
+          
+        ]
+      }) }}
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      <h2 class="govuk-heading-m">
+        Have you completed this section?
+      </h2>
+
+{{ govukRadios({
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: ""
+    }
+  },
+  items: [
+    {
+      value: "Yes",
+      text: "Yes, I’ve completed this section"
+    },
+    {
+      value: "No",
+      text: "No, I’ll come back later"
+    }
+  ]
+}) }}
+
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

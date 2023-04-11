@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back to application",
+  href: "task-list"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Site details
+      </h1>
+
+      <p>Tell us about your site or sites. You can add more than one.</p>
+      <p>In this section, you’ll need to tell us:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the site name and address</li>
+        <li>the amount and type of homes your are building</li>
+        <li>details about the planning permission</li>
+        <li>the building start date and estimated completion date</li>
+        <li>the type of site</li>
+        <li>the tenure the homes will be sold under</li>
+        <li>details about the ownership of the site</li>
+        <li>the amount of affordable homes the project will deliver</li>
+      </ul>
+
+
+
+      {{ govukButton({
+        text: "Start now",
+        href: "#",
+        isStartButton: true
+      }) }}
+
+    
+
+    </div>
+
+    
+  </div>
+
+{% endblock %}
