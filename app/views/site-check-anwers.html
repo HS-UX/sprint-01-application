@@ -274,27 +274,27 @@
         Have you completed this section?
       </h2>
 
-{{ govukRadios({
-  name: "where-do-you-live",
-  fieldset: {
-    legend: {
-      text: ""
-    }
-  },
-  items: [
-    {
-      value: "Yes",
-      text: "Yes, I’ve completed this section"
-    },
-    {
-      value: "No",
-      text: "No, I’ll come back later"
-    }
-  ]
-}) }}
-
-
       <form action="/site-summary-list" method="post" novalidate>
+        {{ govukRadios({
+          name: "site-check-anwers",
+          fieldset: {
+            legend: {
+              text: ""
+            }
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes, I’ve completed this section"
+            },
+            {
+              value: "No",
+              text: "No, I’ll come back later"
+            }
+          ]
+        }) }}
+
+
 
         {{ govukButton({
           text: "Continue"

@@ -176,29 +176,27 @@
         Have you completed this section?
       </h2>
 
-{{ govukRadios({
-  name: "sec-check-answers",
-  fieldset: {
-    legend: {
-      text: ""
-    }
-  },
-  items: [
-    {
-      name: "sec-check-answers",
-      value: "No",
-      text: "No, I’ll come back later"
-    },
-    {
-      name: "sec-check-answers",
-      value: "Yes",
-      text: "Yes, I’ve completed this section"
-    }
-  ]
-}) }}
-
-
       <form action="/task-list" method="post" novalidate>
+        {{ govukRadios({
+          name: "sec-check-answers",
+          fieldset: {
+            legend: {
+              text: ""
+            }
+          },
+          items: [
+            {
+              value: "No",
+              text: "No, I’ll come back later"
+            },
+            {
+              value: "Yes",
+              text: "Yes, I’ve completed this section"
+            }
+          ]
+        }) }}
+
+
 
         {{ govukButton({
           text: "Continue"
