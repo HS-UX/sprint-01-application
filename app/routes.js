@@ -20,3 +20,7 @@ router.post('/yes-no-confirmation', (req, res) => {
     else
         res.redirect(req.session.data['no-route'])
 })
+
+router.get('/tmp', (req, res) => {
+    console.log(JSON.stringify(req.session.data))
+})

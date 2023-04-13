@@ -177,7 +177,7 @@
       </h2>
 
 {{ govukRadios({
-  name: "where-do-you-live",
+  name: "sec-check-answers",
   fieldset: {
     legend: {
       text: ""
@@ -185,12 +185,14 @@
   },
   items: [
     {
-      value: "Yes",
-      text: "Yes, I’ve completed this section"
-    },
-    {
+      name: "sec-check-answers",
       value: "No",
       text: "No, I’ll come back later"
+    },
+    {
+      name: "sec-check-answers",
+      value: "Yes",
+      text: "Yes, I’ve completed this section"
     }
   ]
 }) }}
