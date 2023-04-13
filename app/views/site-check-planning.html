@@ -28,13 +28,13 @@
               text: "Location"
             },
             value: {
-              text: "Location"
+              text: "Location from API"
             },
             actions: {
               items: [
                 {
-                  href: "#",
-                  text: "",
+                  href: "/site-planning-ref-enter",
+                  text: "Change",
                   visuallyHiddenText: "Question 1"
                 }
               ]
@@ -46,13 +46,13 @@
               text: "Planning status"
             },
             value: {
-              text: "Planning status"
+              text: "Planning status from API"
             },
             actions: {
               items: [
                 {
-                  href: "#",
-                  text: "",
+                  href: "/site-planning-ref-enter",
+                  text: "Change",
                   visuallyHiddenText: "Question 2"
                 }
               ]
@@ -64,12 +64,12 @@
               text: "Estimated start date"
             },
             value: {
-              text: "00/00/00"
+              text: data['site-start-dates-day']+'/'+data['site-start-dates-month']+'/'+data['site-start-dates-year']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "/site-edit-dates",
                   text: "Change",
                   visuallyHiddenText: "Question 3"
                 }
@@ -82,12 +82,12 @@
               text: "Estimated completion date"
             },
             value: {
-              text: "00/00/00"
+              text: data['site-end-dates-day']+'/'+data['site-end-dates-month']+'/'+data['site-end-dates-year']
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "/site-edit-dates",
                   text: "Change",
                   visuallyHiddenText: "Question 4"
                 }
@@ -99,7 +99,7 @@
 
      
 
-      <form action="/confirmation" method="post" novalidate>
+      <form action="/site-ownership" method="post" novalidate>
 
         {{ govukButton({
           text: "Continue"

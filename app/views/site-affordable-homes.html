@@ -14,24 +14,24 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    
 
-      <h1 class="govuk-heading-l">
-        How many Affordable homes do you intend to deliver on this site?
-      </h1>
+      <form class="form" action="/site-check-anwers" method="post">
+        <div class="govuk-grid-column-two-thirds">
 
-      <p>Affordable homes are properties provided at a cost below market levels. If your site contains no affordable homes, enter 0.</p>
-
-
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="width-4">
-        
-      </label>
-      <input class="govuk-input govuk-input--width-4" id="width-4" name="width-4" type="text">
-    </div>
-
-      <form class="form" action="/path/of/next/page" method="post">
-
+          <h1 class="govuk-heading-l">
+            How many Affordable homes do you intend to deliver on this site?
+          </h1>
+    
+          <p>Affordable homes are properties provided at a cost below market levels. If your site contains no affordable homes, enter 0.</p>
+    
+    
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="site-affordable-homes">
+            
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="site-affordable-homes" name="site-affordable-homes" type="text">
+        </div>
       
 
         {{ govukButton({

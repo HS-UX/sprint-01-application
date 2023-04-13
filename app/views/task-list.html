@@ -43,7 +43,7 @@
           <h2 class="govuk-prototype-kit-task-list__section">
             <span class="govuk-prototype-kit-task-list__section-number">2. </span> Project and funding details
           </h2>
-          <p>Complete information about the type of funding you wish to apply for, and other details about your equity and finances.</p>
+          <p>Complete information about the type of funding you wish to apply for, and other details about your equity and finances. {{data['sec-check-answers']}}</p>
           <ul class="govuk-prototype-kit-task-list__items">
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
@@ -59,7 +59,12 @@
                   Provide details about security
                 </a>
               </span>
-              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="company-information-status">Completed</strong>
+              {%if data['sec-check-answers'] == 'Yes'%}
+                <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="company-information-status">Completed</strong>
+              {%endif%}
+              {%if data['sec-check-answers'] == 'No'%}
+                <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="company-information-status">In Progress</strong>
+              {%endif%}
             
           </ul>
         </li>
@@ -76,7 +81,12 @@
                   Site 01
                 </a>
               </span>
-              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="company-information-status">Completed</strong>
+              {%if data['site-check-anwers'] == 'Yes'%}
+                <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="company-information-status">Completed</strong>
+              {%endif%}
+              {%if data['site-check-anwers'] == 'No'%}
+                <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="company-information-status">In Progress</strong>
+              {%endif%}
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">

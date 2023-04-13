@@ -18,27 +18,29 @@
 
 
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/yes-no-confirmation" method="post">
+        <input name="yes-route" value="/sec-legal-development-more" type="hidden">
+        <input name="no-route" value="/sec-charges-debt-company" type="hidden">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <fieldset class="govuk-fieldset" aria-describedby="sec-legal-development-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
                 Are there any existing legal charges over the development site?
               </h1>
             </legend>
-            <div id="changed-name-hint" class="govuk-hint">
+            <div id="sec-legal-development-hint" class="govuk-hint">
               Homes England requires a first legal charge over the development site.            </div>
             <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="changed-name">
+                <input class="govuk-radios__input" id="sec-legal-development" name="sec-legal-development" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="sec-legal-development">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                <input class="govuk-radios__input" id="sec-legal-development-2" name="sec-legal-development" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="sec-legal-development-2">
                   No
                 </label>
               </div>
