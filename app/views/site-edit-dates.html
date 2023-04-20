@@ -17,7 +17,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
       Edit your estimated start and completion dates
     </h1>
 
-    <form class="form" action="/path/of/next/page" method="post">
+    <form class="form" action="/site-additional" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="site-start-dates-hint">
@@ -32,7 +32,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                   Day
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="site-start-dates-day"
-                  name="site-start-dates-day" type="text" inputmode="numeric">
+                  name="site-start-dates-day" type="text" inputmode="numeric" value="{{ data['site-start-dates-day'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -41,7 +41,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                   Month
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="site-start-dates-month"
-                  name="site-start-dates-month" type="text" inputmode="numeric">
+                  name="site-start-dates-month" type="text" inputmode="numeric" value="{{ data['site-start-dates-month'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -50,7 +50,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                   Year
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="site-start-dates-year"
-                  name="site-start-dates-year" type="text" inputmode="numeric">
+                  name="site-start-dates-year" type="text" inputmode="numeric" value="{{ data['site-start-dates-year'] }}">
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                   Day
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="site-end-dates-day"
-                  name="site-end-dates-day" type="text" inputmode="numeric">
+                  name="site-end-dates-day" type="text" inputmode="numeric" value="{{ data['site-end-dates-day'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -79,7 +79,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                   Month
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="site-end-dates-month"
-                  name="site-end-dates-month" type="text" inputmode="numeric">
+                  name="site-end-dates-month" type="text" inputmode="numeric" value="{{ data['site-end-dates-month'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -88,7 +88,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                   Year
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="site-end-dates-year"
-                  name="site-end-dates-year" type="text" inputmode="numeric">
+                  name="site-end-dates-year" type="text" inputmode="numeric" value="{{ data['site-end-dates-year'] }}">
               </div>
             </div>
           </div>

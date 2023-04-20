@@ -33,7 +33,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2"
                   id="site-additional-no-ref-dates-day" name="site-additional-dates-day" type="text"
-                  inputmode="numeric">
+                  inputmode="numeric" value="{{ data['site-additional-dates-day'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -43,7 +43,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2"
                   id="site-additional-no-ref-dates-month" name="site-additional-dates-month" type="text"
-                  inputmode="numeric">
+                  inputmode="numeric" value="{{ data['site-additional-dates-month'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -53,7 +53,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4"
                   id="site-additional-no-ref-dates-year" name="site-additional-dates-year" type="text"
-                  inputmode="numeric">
+                  inputmode="numeric" value="{{ data['site-additional-dates-year'] }}">
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-input__wrapper">
           <div class="govuk-input__prefix" aria-hidden="true">£</div>
           <input class="govuk-input govuk-input--width-5" id="site-additional-no-ref-cost" name="site-additional-cost"
-            type="text" spellcheck="false">
+            type="text" spellcheck="false" value="{{ data['site-additional-cost'] }}">
         </div>
       </div>
 
@@ -76,7 +76,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-input__wrapper">
           <div class="govuk-input__prefix" aria-hidden="true">£</div>
           <input class="govuk-input govuk-input--width-5" id="site-additional-no-ref-worth" name="site-additional-worth"
-            type="text" spellcheck="false">
+            type="text" spellcheck="false" value="{{ data['site-additional-worth'] }}">
         </div>
       </div>
 

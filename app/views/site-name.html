@@ -24,7 +24,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
     <form class="form" action="/site-many-homes" method="post">
 
       <div class="govuk-form-group">
-        <input class="govuk-input" id="site-name" name="site-name" type="text">
+        <input class="govuk-input" id="site-name" name="site-name" type="text" value="{{ data['site-name'] }}">
       </div>
 
       <button class="govuk-button" data-module="govuk-button">
