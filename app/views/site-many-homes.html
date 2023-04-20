@@ -1,52 +1,45 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        How many homes are you building?
-      </h1>
+    <h1 class="govuk-heading-l">
+      How many homes are you building?
+    </h1>
 
-      <form class="form" action="/site-type-homes" method="post">
+    <form class="form" action="/site-type-homes" method="post">
 
-        {% from "govuk/components/input/macro.njk" import govukInput %}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="site-many-homes">
+          Enter how many homes you are building or the nearest estimate.
+        </label>
+        <input class="govuk-input" id="site-many-homes" name="site-many-homes" type="text">
+      </div>
 
-{{ govukInput({
-  label: {
-    text: "Enter how many homes you are building or the nearest estimate."
-  },
-  id: "site-many-homes",
-  name: "site-many-homes"
-}) }}
+      <div class="govuk-inset-text">
+        Homes England does not provide loans to developers building less than 5 homes.
+        If you have any questions, contact us via telephone: 0800...
+      </div>
 
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
 
-{{ govukInsetText({
-  text: "Homes England does not provide loans to developers building less than 5 homes.
-  If you have any questions, contact us via telephone: 0800..."
-}) }}
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
-      </form>
-      <p class="govuk-body"><a href="task-list" class="govuk-link">Return to application</a></p>
-      <p class="govuk-body"><a href="sec-check-answers.html" class="govuk-link">Show and edit all answers for this section</a></p>
-    </div>
+    </form>
+    <p class="govuk-body"><a href="task-list" class="govuk-link">Return to application</a></p>
+    <p class="govuk-body"><a href="sec-check-answers.html" class="govuk-link">Show and edit all answers for this
+        section</a></p>
   </div>
+</div>
 
 {% endblock %}

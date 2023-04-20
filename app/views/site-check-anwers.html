@@ -1,307 +1,229 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }}
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <h1 class="govuk-heading-xl">
+      Check your answers
+    </h1>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Site name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-name'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-name">
+            Change<span class="govuk-visually-hidden"> site-name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of homes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-many-homes'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-many-homes">
+            Change<span class="govuk-visually-hidden"> site-many-homes</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Type of homes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-type-homes'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-type-homes">
+            Change<span class="govuk-visually-hidden"> site-type-homes</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Planning reference number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-planning-ref-enter'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-planning-ref-enter">
+            Change<span class="govuk-visually-hidden"> site-planning-ref-enter</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Location from API
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-planning-ref-enter">
+            Change<span class="govuk-visually-hidden"> site-planning-ref-enter</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Planning status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Planning status from API
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-planning-ref-enter">
+            Change<span class="govuk-visually-hidden"> site-planning-ref-enter</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Estimated start date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-start-dates-day'] }}/{{ data['site-start-dates-month'] }}/{{ data['site-start-dates-year'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-edit-dates">
+            Change<span class="govuk-visually-hidden"> site-edit-dates</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Estimated completion date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-end-dates-day'] }}/{{ data['site-end-dates-month'] }}/{{ data['site-end-dates-year'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-edit-dates">
+            Change<span class="govuk-visually-hidden"> site-edit-dates</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Site purchased, site cost, site value, source
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-additional-dates-day'] + '/' + data['site-additional-dates-month'] + '/' +
+          data['site-additional-dates-year'] +
+          ', ' + data['site-additional-cost'] + ', ' + data['site-additional-worth'] + ', ' +
+          data['site-additional-source'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-additional">
+            Change<span class="govuk-visually-hidden"> site-additional</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Site purchased from
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-purchase'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-purchase">
+            Change<span class="govuk-visually-hidden"> site-purchase</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Public sector grant funding
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-grant-funding'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-grant-funding">
+            Change<span class="govuk-visually-hidden"> site-grant-funding</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Additional information
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Previous funding: {{ data['site-grant-funding-more-who'] }}<br>
+          Amount: {{ data['site-grant-funding-more-cost'] + "£" }}<br>
+          Name of the grant/found: {{ data['site-grant-funding-more-name'] }}<br>
+          It was for: {{ data['site-grant-funding-more-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-grant-funding-more">
+            Change<span class="govuk-visually-hidden"> site-grant-funding-more</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Affordable homes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['site-affordable-homes'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="site-affordable-homes">
+            Change<span class="govuk-visually-hidden"> site-affordable-homes</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
 
-      <h1 class="govuk-heading-xl">
-        Check your answers 
-      </h1>
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Site name"
-            },
-            value: {
-              text: data['site-name']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-name",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Number of homes"
-            },
-            value: {
-              text: data['site-many-homes']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-many-homes",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Type of homes"
-            },
-            value: {
-              text: data['site-type-homes']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-type-homes",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-                
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Planning reference number"
-            },
-            value: {
-              text: data['site-planning-ref-enter']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-planning-ref-enter",
-                  text: "Change",
-                  visuallyHiddenText: "Question 4"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Location"
-            },
-            value: {
-              text: "Location from API"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-planning-ref-enter",
-                  text: "Change",
-                  visuallyHiddenText: "Question 5"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Planning status"
-            },
-            value: {
-              text: "Planning status from API"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-planning-ref-enter",
-                  text: "Change",
-                  visuallyHiddenText: "Question 6"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Estimated start date"
-            },
-            value: {
-              text: data['site-start-dates-day']+'/'+data['site-start-dates-month']+'/'+data['site-start-dates-year']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-edit-dates",
-                  text: "Change",
-                  visuallyHiddenText: "Question 7"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Estimated completion date"
-            },
-            value: {
-              text: data['site-end-dates-day']+'/'+data['site-end-dates-month']+'/'+data['site-end-dates-year']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-edit-dates",
-                  text: "Change",
-                  visuallyHiddenText: "Question 8"
-                }
-                
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Site purchased, site cost, site value, source"
-            },
-            value: {
-              text: data['site-additional-dates-day'] + '/' + data['site-additional-dates-month'] + '/' + data['site-additional-dates-year'] +
-                    ', ' + data['site-additional-cost'] + ', ' + data['site-additional-worth'] + ', ' + data['site-additional-source']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-additional",
-                  text: "Change",
-                  visuallyHiddenText: "Question 9"
-                }
-                
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Site purchased from"
-            },
-            value: {
-              text: data['site-purchase']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-purchase",
-                  text: "Change",
-                  visuallyHiddenText: "Question 10"
-                }
-                
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Public sector grant funding"
-            },
-            value: {
-              text: data['site-grant-funding']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-grant-funding",
-                  text: "Change",
-                  visuallyHiddenText: "Question 11"
-                }
-                
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Additional information"
-            },
-            value: {
-              text: "Previous funding: " + data['site-grant-funding-more-who'] + ". " + 
-                    "Amount: " + data['site-grant-funding-more-cost'] + "£. " + 
-                    "Name of the grant/found: " + data['site-grant-funding-more-name'] + ". " + 
-                    "It was for: " + data['site-grant-funding-more-detail']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-grant-funding-more",
-                  text: "Change",
-                  visuallyHiddenText: "Question 12"
-                }
-                
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Affordable homes"
-            },
-            value: {
-              text: data['site-affordable-homes']
-            },
-            actions: {
-              items: [
-                {
-                  href: "/site-affordable-homes",
-                  text: "Change",
-                  visuallyHiddenText: "Question 13"
-                }
-                
-              ]
-            }
-          }
-          
-        ]
-      }) }}
+    <form class="form" action="/site-summary-list" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="site-check-anwers-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-heading-m">
+              Have you completed this section?
+            </h2>
+          </legend>
+          <div id="site-check-anwers-hint" class="govuk-hint">
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="site-check-anwers-2" name="site-check-anwers" type="radio"
+                  value="No">
+                <label class="govuk-label govuk-radios__label" for="site-check-anwers-2">
+                  No, I`ll come back later
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="site-check-anwers" name="site-check-anwers" type="radio"
+                  value="Yes">
+                <label class="govuk-label govuk-radios__label" for="site-check-anwers">
+                  Yes, I`ve completed this section
+                </label>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-      <h2 class="govuk-heading-m">
-        Have you completed this section?
-      </h2>
-
-      <form action="/site-summary-list" method="post" novalidate>
-        {{ govukRadios({
-          name: "site-check-anwers",
-          fieldset: {
-            legend: {
-              text: ""
-            }
-          },
-          items: [
-            {
-              value: "Yes",
-              text: "Yes, I’ve completed this section"
-            },
-            {
-              value: "No",
-              text: "No, I’ll come back later"
-            }
-          ]
-        }) }}
-
-
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
-      </form>
-
-    </div>
+    </form>
   </div>
+</div>
 {% endblock %}
